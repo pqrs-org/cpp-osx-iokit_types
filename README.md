@@ -23,5 +23,5 @@ You can also install `include/pqrs` by using [cget](https://github.com/pfultz2/c
 
 ```shell
 cget install foonathan/type_safe@v0.2 --cmake header
-cget install pqrs-org/cpp-osx-iokit-types@v1.1.0 --cmake header
+cget install pqrs-org/cpp-osx-iokit-types@v1.2.0 --cmake header
 ```
