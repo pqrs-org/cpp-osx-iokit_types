@@ -13,15 +13,15 @@ cpp-osx-iokit_types depends the following classes.
 
 ## Install
 
+### Using package manager
+
+You can install `include/pqrs` by using [cget](https://github.com/pfultz2/cget).
+
+```shell
+cget install pqrs-org/cpp-cget-recipes
+cget install pqrs-org/cpp-osx-iokit_types
+```
+
 ### Manual install
 
 Copy `include/pqrs` directory into your include directory.
-
-### Using package manager
-
-You can also install `include/pqrs` by using [cget](https://github.com/pfultz2/cget).
-
-```shell
-cget install foonathan/type_safe@v0.2 --cmake header
-cget install pqrs-org/cpp-osx-iokit_types@v2.0.0 --cmake header
-```
