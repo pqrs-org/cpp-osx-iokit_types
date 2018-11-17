@@ -8,5 +8,7 @@ int main(void) {
   std::unordered_map<pqrs::osx::iokit_registry_entry_id, std::string> map;
   map[registry_entry_id] = "12345";
 
+  std::cout << "iokit_usage_page_generic_desktop " << pqrs::osx::iokit_usage_page_generic_desktop << std::endl;
+
   return 0;
 }
