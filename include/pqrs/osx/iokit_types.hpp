@@ -7,3 +7,5 @@
 // (See http://www.boost.org/LICENSE_1_0.txt)
 
 #include "iokit_types/iokit_registry_entry_id.hpp"
+#include "iokit_types/iokit_usage.hpp"
+#include "iokit_types/iokit_usage_page.hpp"
