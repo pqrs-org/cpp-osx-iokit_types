@@ -15,24 +15,24 @@ TEST_CASE("iokit_registry_entry_id") {
   map[value1] = true;
 }
 
-TEST_CASE("iokit_usage_page") {
-  pqrs::osx::iokit_usage_page value1(1);
-  pqrs::osx::iokit_usage_page value2(2);
+TEST_CASE("iokit_hid_usage_page") {
+  pqrs::osx::iokit_hid_usage_page value1(1);
+  pqrs::osx::iokit_hid_usage_page value2(2);
 
   REQUIRE(value1 != value2);
   REQUIRE(value1 < value2);
 
-  std::unordered_map<pqrs::osx::iokit_usage_page, bool> map;
+  std::unordered_map<pqrs::osx::iokit_hid_usage_page, bool> map;
   map[value1] = true;
 }
 
-TEST_CASE("iokit_usage") {
-  pqrs::osx::iokit_usage value1(1);
-  pqrs::osx::iokit_usage value2(2);
+TEST_CASE("iokit_hid_usage") {
+  pqrs::osx::iokit_hid_usage value1(1);
+  pqrs::osx::iokit_hid_usage value2(2);
 
   REQUIRE(value1 != value2);
   REQUIRE(value1 < value2);
 
-  std::unordered_map<pqrs::osx::iokit_usage, bool> map;
+  std::unordered_map<pqrs::osx::iokit_hid_usage, bool> map;
   map[value1] = true;
 }
