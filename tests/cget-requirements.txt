@@ -1,2 +1,2 @@
-catchorg/Catch2@v2.4.2
-foonathan/type_safe@v0.2 --cmake header
+catchorg/Catch2
+foonathan/type_safe
