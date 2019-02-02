@@ -14,6 +14,9 @@ TEST_CASE("iokit_hid_location_id") {
 
   std::unordered_map<pqrs::osx::iokit_hid_location_id, bool> map;
   map[value1] = true;
+
+  REQUIRE(std::hash<pqrs::osx::iokit_hid_location_id>{}(pqrs::osx::iokit_hid_location_id(100)) !=
+          std::hash<pqrs::osx::iokit_hid_location_id>{}(pqrs::osx::iokit_hid_location_id(0)));
 }
 
 TEST_CASE("iokit_hid_product_id") {
@@ -25,6 +28,9 @@ TEST_CASE("iokit_hid_product_id") {
 
   std::unordered_map<pqrs::osx::iokit_hid_product_id, bool> map;
   map[value1] = true;
+
+  REQUIRE(std::hash<pqrs::osx::iokit_hid_product_id>{}(pqrs::osx::iokit_hid_product_id(100)) !=
+          std::hash<pqrs::osx::iokit_hid_product_id>{}(pqrs::osx::iokit_hid_product_id(0)));
 }
 
 TEST_CASE("iokit_hid_usage_page") {
@@ -36,6 +42,9 @@ TEST_CASE("iokit_hid_usage_page") {
 
   std::unordered_map<pqrs::osx::iokit_hid_usage_page, bool> map;
   map[value1] = true;
+
+  REQUIRE(std::hash<pqrs::osx::iokit_hid_usage_page>{}(pqrs::osx::iokit_hid_usage_page(100)) !=
+          std::hash<pqrs::osx::iokit_hid_usage_page>{}(pqrs::osx::iokit_hid_usage_page(0)));
 }
 
 TEST_CASE("iokit_hid_usage") {
@@ -47,6 +56,9 @@ TEST_CASE("iokit_hid_usage") {
 
   std::unordered_map<pqrs::osx::iokit_hid_usage, bool> map;
   map[value1] = true;
+
+  REQUIRE(std::hash<pqrs::osx::iokit_hid_usage>{}(pqrs::osx::iokit_hid_usage(100)) !=
+          std::hash<pqrs::osx::iokit_hid_usage>{}(pqrs::osx::iokit_hid_usage(0)));
 }
 
 TEST_CASE("iokit_hid_vendor_id") {
@@ -58,6 +70,9 @@ TEST_CASE("iokit_hid_vendor_id") {
 
   std::unordered_map<pqrs::osx::iokit_hid_vendor_id, bool> map;
   map[value1] = true;
+
+  REQUIRE(std::hash<pqrs::osx::iokit_hid_vendor_id>{}(pqrs::osx::iokit_hid_vendor_id(100)) !=
+          std::hash<pqrs::osx::iokit_hid_vendor_id>{}(pqrs::osx::iokit_hid_vendor_id(0)));
 }
 
 TEST_CASE("iokit_registry_entry_id") {
@@ -69,6 +84,9 @@ TEST_CASE("iokit_registry_entry_id") {
 
   std::unordered_map<pqrs::osx::iokit_registry_entry_id, bool> map;
   map[value1] = true;
+
+  REQUIRE(std::hash<pqrs::osx::iokit_registry_entry_id>{}(pqrs::osx::iokit_registry_entry_id(100)) !=
+          std::hash<pqrs::osx::iokit_registry_entry_id>{}(pqrs::osx::iokit_registry_entry_id(0)));
 }
 
 TEST_CASE("pair<iokit_hid_usage_page, iokit_hid_usage>") {
