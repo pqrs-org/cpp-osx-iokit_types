@@ -1,3 +1,3 @@
 catchorg/Catch2
 foonathan/type_safe
-nlohmann/json
+pqrs-org/cpp-json
