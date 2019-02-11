@@ -9,72 +9,204 @@ TEST_CASE("nlohmann_json") {
   // iokit_hid_location_id
 
   {
-    pqrs::osx::iokit_hid_location_id value1(u64);
-    nlohmann::json json = value1;
-    auto value2 = json.get<pqrs::osx::iokit_hid_location_id>();
-    REQUIRE(value1 == value2);
-    REQUIRE(json.dump() == "13835058055282163712");
-  }
+    using t = pqrs::osx::iokit_hid_location_id;
 
-  REQUIRE_THROWS(nlohmann::json::array().get<pqrs::osx::iokit_hid_location_id>());
+    {
+      t value1(u64);
+      nlohmann::json json = value1;
+      auto value2 = json.get<t>();
+      REQUIRE(value1 == value2);
+      REQUIRE(json.dump() == "13835058055282163712");
+    }
+
+    REQUIRE_THROWS(nlohmann::json::array().get<t>());
+    REQUIRE_THROWS_AS(
+        nlohmann::json().get<t>(),
+        pqrs::json::unmarshal_error);
+    REQUIRE_THROWS_WITH(
+        nlohmann::json().get<t>(),
+        "json must be number, but is `null`");
+    REQUIRE_THROWS_WITH(
+        nlohmann::json(true).get<t>(),
+        "json must be number, but is `true`");
+    REQUIRE_THROWS_WITH(
+        nlohmann::json::object().get<t>(),
+        "json must be number, but is `{}`");
+    REQUIRE_THROWS_WITH(
+        nlohmann::json::array().get<t>(),
+        "json must be number, but is `[]`");
+    REQUIRE_THROWS_WITH(
+        nlohmann::json("1234").get<t>(),
+        "json must be number, but is `\"1234\"`");
+  }
 
   // iokit_hid_product_id
 
   {
-    pqrs::osx::iokit_hid_product_id value1(u64);
-    nlohmann::json json = value1;
-    auto value2 = json.get<pqrs::osx::iokit_hid_product_id>();
-    REQUIRE(value1 == value2);
-    REQUIRE(json.dump() == "13835058055282163712");
-  }
+    using t = pqrs::osx::iokit_hid_product_id;
 
-  REQUIRE_THROWS(nlohmann::json::array().get<pqrs::osx::iokit_hid_product_id>());
+    {
+      t value1(u64);
+      nlohmann::json json = value1;
+      auto value2 = json.get<t>();
+      REQUIRE(value1 == value2);
+      REQUIRE(json.dump() == "13835058055282163712");
+    }
+
+    REQUIRE_THROWS(nlohmann::json::array().get<t>());
+    REQUIRE_THROWS_AS(
+        nlohmann::json().get<t>(),
+        pqrs::json::unmarshal_error);
+    REQUIRE_THROWS_WITH(
+        nlohmann::json().get<t>(),
+        "json must be number, but is `null`");
+    REQUIRE_THROWS_WITH(
+        nlohmann::json(true).get<t>(),
+        "json must be number, but is `true`");
+    REQUIRE_THROWS_WITH(
+        nlohmann::json::object().get<t>(),
+        "json must be number, but is `{}`");
+    REQUIRE_THROWS_WITH(
+        nlohmann::json::array().get<t>(),
+        "json must be number, but is `[]`");
+    REQUIRE_THROWS_WITH(
+        nlohmann::json("1234").get<t>(),
+        "json must be number, but is `\"1234\"`");
+  }
 
   // iokit_hid_usage
 
   {
-    pqrs::osx::iokit_hid_usage value1(i32);
-    nlohmann::json json = value1;
-    auto value2 = json.get<pqrs::osx::iokit_hid_usage>();
-    REQUIRE(value1 == value2);
-    REQUIRE(json.dump() == "1610612736");
-  }
+    using t = pqrs::osx::iokit_hid_usage;
 
-  REQUIRE_THROWS(nlohmann::json::array().get<pqrs::osx::iokit_hid_usage>());
+    {
+      t value1(i32);
+      nlohmann::json json = value1;
+      auto value2 = json.get<t>();
+      REQUIRE(value1 == value2);
+      REQUIRE(json.dump() == "1610612736");
+    }
+
+    REQUIRE_THROWS(nlohmann::json::array().get<t>());
+    REQUIRE_THROWS_AS(
+        nlohmann::json().get<t>(),
+        pqrs::json::unmarshal_error);
+    REQUIRE_THROWS_WITH(
+        nlohmann::json().get<t>(),
+        "json must be number, but is `null`");
+    REQUIRE_THROWS_WITH(
+        nlohmann::json(true).get<t>(),
+        "json must be number, but is `true`");
+    REQUIRE_THROWS_WITH(
+        nlohmann::json::object().get<t>(),
+        "json must be number, but is `{}`");
+    REQUIRE_THROWS_WITH(
+        nlohmann::json::array().get<t>(),
+        "json must be number, but is `[]`");
+    REQUIRE_THROWS_WITH(
+        nlohmann::json("1234").get<t>(),
+        "json must be number, but is `\"1234\"`");
+  }
 
   // iokit_hid_usage_page
 
   {
-    pqrs::osx::iokit_hid_usage_page value1(i32);
-    nlohmann::json json = value1;
-    auto value2 = json.get<pqrs::osx::iokit_hid_usage_page>();
-    REQUIRE(value1 == value2);
-    REQUIRE(json.dump() == "1610612736");
-  }
+    using t = pqrs::osx::iokit_hid_usage_page;
 
-  REQUIRE_THROWS(nlohmann::json::array().get<pqrs::osx::iokit_hid_usage_page>());
+    {
+      t value1(i32);
+      nlohmann::json json = value1;
+      auto value2 = json.get<t>();
+      REQUIRE(value1 == value2);
+      REQUIRE(json.dump() == "1610612736");
+    }
+
+    REQUIRE_THROWS(nlohmann::json::array().get<t>());
+    REQUIRE_THROWS_AS(
+        nlohmann::json().get<t>(),
+        pqrs::json::unmarshal_error);
+    REQUIRE_THROWS_WITH(
+        nlohmann::json().get<t>(),
+        "json must be number, but is `null`");
+    REQUIRE_THROWS_WITH(
+        nlohmann::json(true).get<t>(),
+        "json must be number, but is `true`");
+    REQUIRE_THROWS_WITH(
+        nlohmann::json::object().get<t>(),
+        "json must be number, but is `{}`");
+    REQUIRE_THROWS_WITH(
+        nlohmann::json::array().get<t>(),
+        "json must be number, but is `[]`");
+    REQUIRE_THROWS_WITH(
+        nlohmann::json("1234").get<t>(),
+        "json must be number, but is `\"1234\"`");
+  }
 
   // iokit_hid_vendor_id
 
   {
-    pqrs::osx::iokit_hid_vendor_id value1(u64);
-    nlohmann::json json = value1;
-    auto value2 = json.get<pqrs::osx::iokit_hid_vendor_id>();
-    REQUIRE(value1 == value2);
-    REQUIRE(json.dump() == "13835058055282163712");
-  }
+    using t = pqrs::osx::iokit_hid_vendor_id;
 
-  REQUIRE_THROWS(nlohmann::json::array().get<pqrs::osx::iokit_hid_vendor_id>());
+    {
+      t value1(u64);
+      nlohmann::json json = value1;
+      auto value2 = json.get<t>();
+      REQUIRE(value1 == value2);
+      REQUIRE(json.dump() == "13835058055282163712");
+    }
+
+    REQUIRE_THROWS(nlohmann::json::array().get<t>());
+    REQUIRE_THROWS_AS(
+        nlohmann::json().get<t>(),
+        pqrs::json::unmarshal_error);
+    REQUIRE_THROWS_WITH(
+        nlohmann::json().get<t>(),
+        "json must be number, but is `null`");
+    REQUIRE_THROWS_WITH(
+        nlohmann::json(true).get<t>(),
+        "json must be number, but is `true`");
+    REQUIRE_THROWS_WITH(
+        nlohmann::json::object().get<t>(),
+        "json must be number, but is `{}`");
+    REQUIRE_THROWS_WITH(
+        nlohmann::json::array().get<t>(),
+        "json must be number, but is `[]`");
+    REQUIRE_THROWS_WITH(
+        nlohmann::json("1234").get<t>(),
+        "json must be number, but is `\"1234\"`");
+  }
 
   // iokit_registry_entry_id
 
   {
-    pqrs::osx::iokit_registry_entry_id value1(u64);
-    nlohmann::json json = value1;
-    auto value2 = json.get<pqrs::osx::iokit_registry_entry_id>();
-    REQUIRE(value1 == value2);
-    REQUIRE(json.dump() == "13835058055282163712");
-  }
+    using t = pqrs::osx::iokit_registry_entry_id;
 
-  REQUIRE_THROWS(nlohmann::json::array().get<pqrs::osx::iokit_registry_entry_id>());
+    {
+      t value1(u64);
+      nlohmann::json json = value1;
+      auto value2 = json.get<t>();
+      REQUIRE(value1 == value2);
+      REQUIRE(json.dump() == "13835058055282163712");
+    }
+
+    REQUIRE_THROWS(nlohmann::json::array().get<t>());
+    REQUIRE_THROWS_AS(
+        nlohmann::json().get<t>(),
+        pqrs::json::unmarshal_error);
+    REQUIRE_THROWS_WITH(
+        nlohmann::json().get<t>(),
+        "json must be number, but is `null`");
+    REQUIRE_THROWS_WITH(
+        nlohmann::json(true).get<t>(),
+        "json must be number, but is `true`");
+    REQUIRE_THROWS_WITH(
+        nlohmann::json::object().get<t>(),
+        "json must be number, but is `{}`");
+    REQUIRE_THROWS_WITH(
+        nlohmann::json::array().get<t>(),
+        "json must be number, but is `[]`");
+    REQUIRE_THROWS_WITH(
+        nlohmann::json("1234").get<t>(),
+        "json must be number, but is `\"1234\"`");
+  }
 }
