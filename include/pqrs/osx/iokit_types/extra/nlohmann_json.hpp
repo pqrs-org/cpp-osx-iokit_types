@@ -5,6 +5,7 @@
 // (See http://www.boost.org/LICENSE_1_0.txt)
 
 #include <pqrs/json.hpp>
+#include <pqrs/osx/iokit_types/iokit_hid_country_code.hpp>
 #include <pqrs/osx/iokit_types/iokit_hid_location_id.hpp>
 #include <pqrs/osx/iokit_types/iokit_hid_product_id.hpp>
 #include <pqrs/osx/iokit_types/iokit_hid_usage.hpp>
@@ -14,6 +15,21 @@
 
 namespace pqrs {
 namespace osx {
+// iokit_hid_country_code
+
+inline void to_json(nlohmann::json& j, const iokit_hid_country_code& value) {
+  j = type_safe::get(value);
+}
+
+inline void from_json(const nlohmann::json& j, iokit_hid_country_code& value) {
+  if (!j.is_number()) {
+    using namespace std::string_literals;
+    throw pqrs::json::unmarshal_error("json must be number, but is `"s + j.dump() + "`"s);
+  }
+
+  value = iokit_hid_country_code(j.get<uint64_t>());
+}
+
 // iokit_hid_location_id
 
 inline void to_json(nlohmann::json& j, const iokit_hid_location_id& value) {

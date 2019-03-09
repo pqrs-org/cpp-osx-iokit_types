@@ -7,6 +7,7 @@
 // (See http://www.boost.org/LICENSE_1_0.txt)
 
 #include "iokit_types/hash.hpp"
+#include "iokit_types/iokit_hid_country_code.hpp"
 #include "iokit_types/iokit_hid_location_id.hpp"
 #include "iokit_types/iokit_hid_product_id.hpp"
 #include "iokit_types/iokit_hid_usage.hpp"

@@ -5,6 +5,20 @@
 #include <unordered_map>
 #include <unordered_set>
 
+TEST_CASE("iokit_hid_country_code") {
+  pqrs::osx::iokit_hid_country_code value1(1);
+  pqrs::osx::iokit_hid_country_code value2(2);
+
+  REQUIRE(value1 != value2);
+  REQUIRE(value1 < value2);
+
+  std::unordered_map<pqrs::osx::iokit_hid_country_code, bool> map;
+  map[value1] = true;
+
+  REQUIRE(std::hash<pqrs::osx::iokit_hid_country_code>{}(pqrs::osx::iokit_hid_country_code(100)) !=
+          std::hash<pqrs::osx::iokit_hid_country_code>{}(pqrs::osx::iokit_hid_country_code(0)));
+}
+
 TEST_CASE("iokit_hid_location_id") {
   pqrs::osx::iokit_hid_location_id value1(1);
   pqrs::osx::iokit_hid_location_id value2(2);

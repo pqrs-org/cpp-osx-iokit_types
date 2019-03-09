@@ -4,6 +4,12 @@
 
 TEST_CASE("boost") {
   {
+    pqrs::osx::iokit_hid_country_code v(100);
+    REQUIRE(std::hash<pqrs::osx::iokit_hid_country_code>{}(v) ==
+            pqrs::osx::hash_value(v));
+  }
+
+  {
     pqrs::osx::iokit_hid_location_id v(100);
     REQUIRE(std::hash<pqrs::osx::iokit_hid_location_id>{}(v) ==
             pqrs::osx::hash_value(v));
