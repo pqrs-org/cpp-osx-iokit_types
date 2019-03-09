@@ -89,6 +89,21 @@ TEST_CASE("iokit_hid_vendor_id") {
           std::hash<pqrs::osx::iokit_hid_vendor_id>{}(pqrs::osx::iokit_hid_vendor_id(0)));
 }
 
+TEST_CASE("iokit_keyboard_type") {
+  using t = pqrs::osx::iokit_keyboard_type;
+
+  t value1(1);
+  t value2(2);
+
+  REQUIRE(value1 != value2);
+  REQUIRE(value1 < value2);
+
+  std::unordered_map<t, bool> map;
+  map[value1] = true;
+
+  REQUIRE(std::hash<t>{}(t(100)) != std::hash<t>{}(t(0)));
+}
+
 TEST_CASE("iokit_registry_entry_id") {
   pqrs::osx::iokit_registry_entry_id value1(1);
   pqrs::osx::iokit_registry_entry_id value2(2);

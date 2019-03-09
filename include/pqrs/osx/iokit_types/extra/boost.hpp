@@ -6,6 +6,7 @@
 
 #include <pqrs/osx/iokit_types/hash.hpp>
 #include <pqrs/osx/iokit_types/iokit_hid_country_code.hpp>
+#include <pqrs/osx/iokit_types/iokit_keyboard_type.hpp>
 #include <pqrs/osx/iokit_types/iokit_registry_entry_id.hpp>
 
 namespace pqrs {
@@ -32,6 +33,10 @@ inline std::size_t hash_value(const iokit_hid_usage_page& value) {
 
 inline std::size_t hash_value(const iokit_hid_vendor_id& value) {
   return std::hash<iokit_hid_vendor_id>{}(value);
+}
+
+inline std::size_t hash_value(const iokit_keyboard_type& value) {
+  return std::hash<iokit_keyboard_type>{}(value);
 }
 
 inline std::size_t hash_value(const iokit_registry_entry_id& value) {

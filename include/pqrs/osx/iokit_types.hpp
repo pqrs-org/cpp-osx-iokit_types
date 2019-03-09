@@ -13,4 +13,5 @@
 #include "iokit_types/iokit_hid_usage.hpp"
 #include "iokit_types/iokit_hid_usage_page.hpp"
 #include "iokit_types/iokit_hid_vendor_id.hpp"
+#include "iokit_types/iokit_keyboard_type.hpp"
 #include "iokit_types/iokit_registry_entry_id.hpp"

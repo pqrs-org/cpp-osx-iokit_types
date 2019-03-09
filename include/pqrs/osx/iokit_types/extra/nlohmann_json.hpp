@@ -11,6 +11,7 @@
 #include <pqrs/osx/iokit_types/iokit_hid_usage.hpp>
 #include <pqrs/osx/iokit_types/iokit_hid_usage_page.hpp>
 #include <pqrs/osx/iokit_types/iokit_hid_vendor_id.hpp>
+#include <pqrs/osx/iokit_types/iokit_keyboard_type.hpp>
 #include <pqrs/osx/iokit_types/iokit_registry_entry_id.hpp>
 
 namespace pqrs {
@@ -103,6 +104,21 @@ inline void from_json(const nlohmann::json& j, iokit_hid_vendor_id& value) {
   }
 
   value = iokit_hid_vendor_id(j.get<uint64_t>());
+}
+
+// iokit_keyboard_type
+
+inline void to_json(nlohmann::json& j, const iokit_keyboard_type& value) {
+  j = type_safe::get(value);
+}
+
+inline void from_json(const nlohmann::json& j, iokit_keyboard_type& value) {
+  if (!j.is_number()) {
+    using namespace std::string_literals;
+    throw pqrs::json::unmarshal_error("json must be number, but is `"s + j.dump() + "`"s);
+  }
+
+  value = iokit_keyboard_type(j.get<uint8_t>());
 }
 
 // iokit_registry_entry_id
