@@ -216,11 +216,11 @@ TEST_CASE("nlohmann_json") {
     using t = pqrs::osx::iokit_keyboard_type;
 
     {
-      t value1(255);
+      t value1(u64);
       nlohmann::json json = value1;
       auto value2 = json.get<t>();
       REQUIRE(value1 == value2);
-      REQUIRE(json.dump() == "255");
+      REQUIRE(json.dump() == "13835058055282163712");
     }
 
     REQUIRE_THROWS(nlohmann::json::array().get<t>());

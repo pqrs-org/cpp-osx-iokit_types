@@ -118,7 +118,7 @@ inline void from_json(const nlohmann::json& j, iokit_keyboard_type& value) {
     throw json::unmarshal_error("json must be number, but is `"s + j.dump() + "`"s);
   }
 
-  value = iokit_keyboard_type(j.get<uint8_t>());
+  value = iokit_keyboard_type(j.get<uint64_t>());
 }
 
 // iokit_registry_entry_id
