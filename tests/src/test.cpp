@@ -110,6 +110,13 @@ TEST_CASE("iokit_keyboard_type") {
   REQUIRE(std::hash<t>{}(t(100)) != std::hash<t>{}(t(0)));
 }
 
+TEST_CASE("make_iokit_keyboard_type_string") {
+  REQUIRE(pqrs::osx::make_iokit_keyboard_type_string(pqrs::osx::iokit_keyboard_type(40)) == "ansi");
+  REQUIRE(pqrs::osx::make_iokit_keyboard_type_string(pqrs::osx::iokit_keyboard_type(41)) == "iso");
+  REQUIRE(pqrs::osx::make_iokit_keyboard_type_string(pqrs::osx::iokit_keyboard_type(42)) == "jis");
+  REQUIRE(pqrs::osx::make_iokit_keyboard_type_string(pqrs::osx::iokit_keyboard_type(0)) == "ansi");
+}
+
 TEST_CASE("iokit_registry_entry_id") {
   using t = pqrs::osx::iokit_registry_entry_id;
 
