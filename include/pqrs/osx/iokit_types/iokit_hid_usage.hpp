@@ -21,6 +21,10 @@ inline std::ostream& operator<<(std::ostream& stream, const iokit_hid_usage& val
   return stream << type_safe::get(value);
 }
 
+//
+// iokit_hid_usage_page_generic_desktop
+//
+
 constexpr iokit_hid_usage iokit_hid_usage_generic_desktop_pointer(kHIDUsage_GD_Pointer);
 constexpr iokit_hid_usage iokit_hid_usage_generic_desktop_mouse(kHIDUsage_GD_Mouse);
 constexpr iokit_hid_usage iokit_hid_usage_generic_desktop_keyboard(kHIDUsage_GD_Keyboard);
@@ -30,7 +34,9 @@ constexpr iokit_hid_usage iokit_hid_usage_generic_desktop_y(kHIDUsage_GD_Y);
 constexpr iokit_hid_usage iokit_hid_usage_generic_desktop_z(kHIDUsage_GD_Z);
 constexpr iokit_hid_usage iokit_hid_usage_generic_desktop_wheel(kHIDUsage_GD_Wheel);
 
-constexpr iokit_hid_usage iokit_hid_usage_led_caps_lock(kHIDUsage_LED_CapsLock);
+//
+// iokit_hid_usage_page_keyboard_or_keypad
+//
 
 constexpr iokit_hid_usage iokit_hid_usage_keyboard_error_rollover(kHIDUsage_KeyboardErrorRollOver);
 constexpr iokit_hid_usage iokit_hid_usage_keyboard_post_fail(kHIDUsage_KeyboardPOSTFail);
@@ -208,6 +214,16 @@ constexpr iokit_hid_usage iokit_hid_usage_keyboard_right_gui(kHIDUsage_KeyboardR
 /* 0xE8-0xFFFF Reserved */
 constexpr iokit_hid_usage iokit_hid_usage_keyboard_reserved(kHIDUsage_Keyboard_Reserved);
 
+//
+// iokit_hid_usage_page_leds
+//
+
+constexpr iokit_hid_usage iokit_hid_usage_led_caps_lock(kHIDUsage_LED_CapsLock);
+
+//
+// iokit_hid_usage_page_consumer
+//
+
 constexpr iokit_hid_usage iokit_hid_usage_consumer_consumer_control(kHIDUsage_Csmr_ConsumerControl);
 constexpr iokit_hid_usage iokit_hid_usage_consumer_power(kHIDUsage_Csmr_Power);
 constexpr iokit_hid_usage iokit_hid_usage_consumer_display_brightness_increment(kHIDUsage_Csmr_DisplayBrightnessIncrement);
@@ -222,6 +238,10 @@ constexpr iokit_hid_usage iokit_hid_usage_consumer_mute(kHIDUsage_Csmr_Mute);
 constexpr iokit_hid_usage iokit_hid_usage_consumer_volume_increment(kHIDUsage_Csmr_VolumeIncrement);
 constexpr iokit_hid_usage iokit_hid_usage_consumer_volume_decrement(kHIDUsage_Csmr_VolumeDecrement);
 constexpr iokit_hid_usage iokit_hid_usage_consumer_ac_pan(kHIDUsage_Csmr_ACPan);
+
+//
+// iokit_hid_usage_page_apple_vendor
+//
 
 constexpr iokit_hid_usage iokit_hid_usage_apple_vendor_top_case(0x0001);
 constexpr iokit_hid_usage iokit_hid_usage_apple_vendor_display(0x0002);
@@ -252,6 +272,10 @@ constexpr iokit_hid_usage iokit_hid_usage_apple_vendor_homer(0x0020);
 constexpr iokit_hid_usage iokit_hid_usage_apple_vendor_color(0x0021);
 constexpr iokit_hid_usage iokit_hid_usage_apple_vendor_accessibility(0x0022);
 
+//
+// iokit_hid_usage_page_apple_vendor_keyboard
+//
+
 constexpr iokit_hid_usage iokit_hid_usage_apple_vendor_keyboard_spotlight(0x0001);
 constexpr iokit_hid_usage iokit_hid_usage_apple_vendor_keyboard_dashboard(0x0002);
 constexpr iokit_hid_usage iokit_hid_usage_apple_vendor_keyboard_function(0x0003);
@@ -265,11 +289,19 @@ constexpr iokit_hid_usage iokit_hid_usage_apple_vendor_keyboard_brightness_up(0x
 constexpr iokit_hid_usage iokit_hid_usage_apple_vendor_keyboard_brightness_down(0x0021);
 constexpr iokit_hid_usage iokit_hid_usage_apple_vendor_keyboard_language(0x0030);
 
+//
+// iokit_hid_usage_page_apple_vendor_multitouch
+//
+
 constexpr iokit_hid_usage iokit_hid_usage_apple_vendor_multitouch_power_off(0x0001);
 constexpr iokit_hid_usage iokit_hid_usage_apple_vendor_multitouch_device_ready(0x0002);
 constexpr iokit_hid_usage iokit_hid_usage_apple_vendor_multitouch_external_message(0x0003);
 constexpr iokit_hid_usage iokit_hid_usage_apple_vendor_multitouch_will_power_on(0x0004);
 constexpr iokit_hid_usage iokit_hid_usage_apple_vendor_multitouch_touch_cancel(0x0005);
+
+//
+// iokit_hid_usage_page_apple_vendor_top_case
+//
 
 constexpr iokit_hid_usage iokit_hid_usage_apple_vendor_top_case_keyboard_fn(0x0003);
 constexpr iokit_hid_usage iokit_hid_usage_apple_vendor_top_case_brightness_up(0x0004);
