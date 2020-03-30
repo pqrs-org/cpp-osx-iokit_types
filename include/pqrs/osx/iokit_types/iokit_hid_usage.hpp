@@ -221,6 +221,43 @@ constexpr iokit_hid_usage iokit_hid_usage_keyboard_reserved(kHIDUsage_Keyboard_R
 constexpr iokit_hid_usage iokit_hid_usage_led_caps_lock(kHIDUsage_LED_CapsLock);
 
 //
+// iokit_hid_usage_page_button
+//
+
+constexpr iokit_hid_usage iokit_hid_usage_button_1(kHIDUsage_Button_1);
+constexpr iokit_hid_usage iokit_hid_usage_button_2(kHIDUsage_Button_2);
+constexpr iokit_hid_usage iokit_hid_usage_button_3(kHIDUsage_Button_3);
+constexpr iokit_hid_usage iokit_hid_usage_button_4(kHIDUsage_Button_4);
+constexpr iokit_hid_usage iokit_hid_usage_button_5(kHIDUsage_Button_5);
+constexpr iokit_hid_usage iokit_hid_usage_button_6(kHIDUsage_Button_6);
+constexpr iokit_hid_usage iokit_hid_usage_button_7(kHIDUsage_Button_7);
+constexpr iokit_hid_usage iokit_hid_usage_button_8(kHIDUsage_Button_8);
+constexpr iokit_hid_usage iokit_hid_usage_button_9(kHIDUsage_Button_9);
+constexpr iokit_hid_usage iokit_hid_usage_button_10(kHIDUsage_Button_10);
+constexpr iokit_hid_usage iokit_hid_usage_button_11(kHIDUsage_Button_11);
+constexpr iokit_hid_usage iokit_hid_usage_button_12(kHIDUsage_Button_12);
+constexpr iokit_hid_usage iokit_hid_usage_button_13(kHIDUsage_Button_13);
+constexpr iokit_hid_usage iokit_hid_usage_button_14(kHIDUsage_Button_14);
+constexpr iokit_hid_usage iokit_hid_usage_button_15(kHIDUsage_Button_15);
+constexpr iokit_hid_usage iokit_hid_usage_button_16(kHIDUsage_Button_16);
+constexpr iokit_hid_usage iokit_hid_usage_button_17(kHIDUsage_Button_17);
+constexpr iokit_hid_usage iokit_hid_usage_button_18(kHIDUsage_Button_18);
+constexpr iokit_hid_usage iokit_hid_usage_button_19(kHIDUsage_Button_19);
+constexpr iokit_hid_usage iokit_hid_usage_button_20(kHIDUsage_Button_20);
+constexpr iokit_hid_usage iokit_hid_usage_button_21(kHIDUsage_Button_21);
+constexpr iokit_hid_usage iokit_hid_usage_button_22(kHIDUsage_Button_22);
+constexpr iokit_hid_usage iokit_hid_usage_button_23(kHIDUsage_Button_23);
+constexpr iokit_hid_usage iokit_hid_usage_button_24(kHIDUsage_Button_24);
+constexpr iokit_hid_usage iokit_hid_usage_button_25(kHIDUsage_Button_25);
+constexpr iokit_hid_usage iokit_hid_usage_button_26(kHIDUsage_Button_26);
+constexpr iokit_hid_usage iokit_hid_usage_button_27(kHIDUsage_Button_27);
+constexpr iokit_hid_usage iokit_hid_usage_button_28(kHIDUsage_Button_28);
+constexpr iokit_hid_usage iokit_hid_usage_button_29(kHIDUsage_Button_29);
+constexpr iokit_hid_usage iokit_hid_usage_button_30(kHIDUsage_Button_30);
+constexpr iokit_hid_usage iokit_hid_usage_button_31(kHIDUsage_Button_31);
+constexpr iokit_hid_usage iokit_hid_usage_button_32(kHIDUsage_Button_32);
+
+//
 // iokit_hid_usage_page_consumer
 //
 
