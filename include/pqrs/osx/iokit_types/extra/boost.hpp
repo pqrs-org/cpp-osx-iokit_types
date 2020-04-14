@@ -19,8 +19,8 @@ inline std::size_t hash_value(const iokit_hid_location_id::value_t& value) {
   return std::hash<iokit_hid_location_id::value_t>{}(value);
 }
 
-inline std::size_t hash_value(const iokit_hid_product_id& value) {
-  return std::hash<iokit_hid_product_id>{}(value);
+inline std::size_t hash_value(const iokit_hid_product_id::value_t& value) {
+  return std::hash<iokit_hid_product_id::value_t>{}(value);
 }
 
 inline std::size_t hash_value(const iokit_hid_usage& value) {
@@ -47,12 +47,12 @@ inline std::size_t hash_value(const std::pair<iokit_hid_usage_page, iokit_hid_us
   return std::hash<std::pair<iokit_hid_usage_page, iokit_hid_usage>>{}(value);
 }
 
-inline std::size_t hash_value(const std::pair<iokit_hid_vendor_id, iokit_hid_product_id>& value) {
-  return std::hash<std::pair<iokit_hid_vendor_id, iokit_hid_product_id>>{}(value);
+inline std::size_t hash_value(const std::pair<iokit_hid_vendor_id, iokit_hid_product_id::value_t>& value) {
+  return std::hash<std::pair<iokit_hid_vendor_id, iokit_hid_product_id::value_t>>{}(value);
 }
 
-inline std::size_t hash_value(const std::tuple<iokit_hid_vendor_id, iokit_hid_product_id, iokit_hid_location_id::value_t>& value) {
-  return std::hash<std::tuple<iokit_hid_vendor_id, iokit_hid_product_id, iokit_hid_location_id::value_t>>{}(value);
+inline std::size_t hash_value(const std::tuple<iokit_hid_vendor_id, iokit_hid_product_id::value_t, iokit_hid_location_id::value_t>& value) {
+  return std::hash<std::tuple<iokit_hid_vendor_id, iokit_hid_product_id::value_t, iokit_hid_location_id::value_t>>{}(value);
 }
 } // namespace osx
 } // namespace pqrs

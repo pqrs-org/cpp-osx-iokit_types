@@ -77,7 +77,7 @@ TEST_CASE("nlohmann_json") {
   // iokit_hid_product_id
 
   {
-    using t = pqrs::osx::iokit_hid_product_id;
+    using t = pqrs::osx::iokit_hid_product_id::value_t;
 
     {
       t value1(u64);
