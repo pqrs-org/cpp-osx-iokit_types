@@ -10,6 +10,7 @@ int main(void) {
 
   std::cout << "iokit_hid_usage_page::generic_desktop:" << pqrs::osx::iokit_hid_usage_page::generic_desktop << std::endl;
   std::cout << "iokit_hid_usage_page::apple_vendor_keyboard:" << pqrs::osx::iokit_hid_usage_page::apple_vendor_keyboard << std::endl;
+  std::cout << "iokit_hid_usage::keyboard_or_keypad::keyboard_spacebar: " << pqrs::osx::iokit_hid_usage::keyboard_or_keypad::keyboard_spacebar << std::endl;
 
   return 0;
 }

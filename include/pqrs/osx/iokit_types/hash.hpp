@@ -14,8 +14,8 @@
 
 namespace std {
 template <>
-struct hash<std::pair<pqrs::osx::iokit_hid_usage_page::value_t, pqrs::osx::iokit_hid_usage>> {
-  size_t operator()(const std::pair<pqrs::osx::iokit_hid_usage_page::value_t, pqrs::osx::iokit_hid_usage>& pair) const {
+struct hash<std::pair<pqrs::osx::iokit_hid_usage_page::value_t, pqrs::osx::iokit_hid_usage::value_t>> {
+  size_t operator()(const std::pair<pqrs::osx::iokit_hid_usage_page::value_t, pqrs::osx::iokit_hid_usage::value_t>& pair) const {
     auto h1 = std::hash<int32_t>{}(type_safe::get(pair.first));
     auto h2 = std::hash<int32_t>{}(type_safe::get(pair.second));
     return h1 ^ (h2 << 16);

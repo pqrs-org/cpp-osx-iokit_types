@@ -111,7 +111,7 @@ TEST_CASE("nlohmann_json") {
   // iokit_hid_usage
 
   {
-    using t = pqrs::osx::iokit_hid_usage;
+    using t = pqrs::osx::iokit_hid_usage::value_t;
 
     {
       t value1(i32);
