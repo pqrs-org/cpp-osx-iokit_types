@@ -32,8 +32,8 @@ struct hash<std::pair<pqrs::osx::iokit_hid_vendor_id, pqrs::osx::iokit_hid_produ
 };
 
 template <>
-struct hash<std::tuple<pqrs::osx::iokit_hid_vendor_id, pqrs::osx::iokit_hid_product_id, pqrs::osx::iokit_hid_location_id>> {
-  size_t operator()(const std::tuple<pqrs::osx::iokit_hid_vendor_id, pqrs::osx::iokit_hid_product_id, pqrs::osx::iokit_hid_location_id>& tuple) const {
+struct hash<std::tuple<pqrs::osx::iokit_hid_vendor_id, pqrs::osx::iokit_hid_product_id, pqrs::osx::iokit_hid_location_id::value_t>> {
+  size_t operator()(const std::tuple<pqrs::osx::iokit_hid_vendor_id, pqrs::osx::iokit_hid_product_id, pqrs::osx::iokit_hid_location_id::value_t>& tuple) const {
     auto h1 = std::hash<int32_t>{}(type_safe::get(std::get<0>(tuple)));
     auto h2 = std::hash<int32_t>{}(type_safe::get(std::get<1>(tuple)));
     auto h3 = std::hash<int32_t>{}(type_safe::get(std::get<2>(tuple)));
