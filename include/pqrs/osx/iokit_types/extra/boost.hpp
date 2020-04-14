@@ -11,8 +11,8 @@
 
 namespace pqrs {
 namespace osx {
-inline std::size_t hash_value(const iokit_hid_country_code& value) {
-  return std::hash<iokit_hid_country_code>{}(value);
+inline std::size_t hash_value(const iokit_hid_country_code::value_t& value) {
+  return std::hash<iokit_hid_country_code::value_t>{}(value);
 }
 
 inline std::size_t hash_value(const iokit_hid_location_id& value) {

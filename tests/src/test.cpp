@@ -6,7 +6,7 @@
 #include <unordered_set>
 
 TEST_CASE("iokit_hid_country_code") {
-  using t = pqrs::osx::iokit_hid_country_code;
+  using t = pqrs::osx::iokit_hid_country_code::value_t;
 
   t value1(1);
   t value2(2);

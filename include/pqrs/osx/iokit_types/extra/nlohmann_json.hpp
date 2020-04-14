@@ -16,20 +16,20 @@
 
 namespace pqrs {
 namespace osx {
-// iokit_hid_country_code
-
-inline void to_json(nlohmann::json& j, const iokit_hid_country_code& value) {
+namespace iokit_hid_country_code {
+inline void to_json(nlohmann::json& j, const value_t& value) {
   j = type_safe::get(value);
 }
 
-inline void from_json(const nlohmann::json& j, iokit_hid_country_code& value) {
+inline void from_json(const nlohmann::json& j, value_t& value) {
   if (!j.is_number()) {
     using namespace std::string_literals;
     throw json::unmarshal_error("json must be number, but is `"s + j.dump() + "`"s);
   }
 
-  value = iokit_hid_country_code(j.get<uint64_t>());
+  value = value_t(j.get<uint64_t>());
 }
+} // namespace iokit_hid_country_code
 
 // iokit_hid_location_id
 

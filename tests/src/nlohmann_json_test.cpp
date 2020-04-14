@@ -9,7 +9,7 @@ TEST_CASE("nlohmann_json") {
   // iokit_hid_country_code
 
   {
-    using t = pqrs::osx::iokit_hid_country_code;
+    using t = pqrs::osx::iokit_hid_country_code::value_t;
 
     {
       t value1(u64);
