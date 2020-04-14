@@ -247,7 +247,7 @@ TEST_CASE("nlohmann_json") {
   // iokit_registry_entry_id
 
   {
-    using t = pqrs::osx::iokit_registry_entry_id;
+    using t = pqrs::osx::iokit_registry_entry_id::value_t;
 
     {
       t value1(u64);

@@ -118,7 +118,7 @@ TEST_CASE("make_iokit_keyboard_type_string") {
 }
 
 TEST_CASE("iokit_registry_entry_id") {
-  using t = pqrs::osx::iokit_registry_entry_id;
+  using t = pqrs::osx::iokit_registry_entry_id::value_t;
 
   t value1(1);
   t value2(2);

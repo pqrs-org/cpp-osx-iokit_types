@@ -121,19 +121,19 @@ inline void from_json(const nlohmann::json& j, value_t& value) {
 }
 } // namespace iokit_keyboard_type
 
-// iokit_registry_entry_id
-
-inline void to_json(nlohmann::json& j, const iokit_registry_entry_id& value) {
+namespace iokit_registry_entry_id {
+inline void to_json(nlohmann::json& j, const value_t& value) {
   j = type_safe::get(value);
 }
 
-inline void from_json(const nlohmann::json& j, iokit_registry_entry_id& value) {
+inline void from_json(const nlohmann::json& j, value_t& value) {
   if (!j.is_number()) {
     using namespace std::string_literals;
     throw json::unmarshal_error("json must be number, but is `"s + j.dump() + "`"s);
   }
 
-  value = iokit_registry_entry_id(j.get<uint64_t>());
+  value = value_t(j.get<uint64_t>());
 }
+} // namespace iokit_registry_entry_id
 } // namespace osx
 } // namespace pqrs

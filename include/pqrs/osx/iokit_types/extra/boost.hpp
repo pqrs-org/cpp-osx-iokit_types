@@ -39,8 +39,8 @@ inline std::size_t hash_value(const iokit_keyboard_type::value_t& value) {
   return std::hash<iokit_keyboard_type::value_t>{}(value);
 }
 
-inline std::size_t hash_value(const iokit_registry_entry_id& value) {
-  return std::hash<iokit_registry_entry_id>{}(value);
+inline std::size_t hash_value(const iokit_registry_entry_id::value_t& value) {
+  return std::hash<iokit_registry_entry_id::value_t>{}(value);
 }
 
 inline std::size_t hash_value(const std::pair<iokit_hid_usage_page::value_t, iokit_hid_usage::value_t>& value) {
