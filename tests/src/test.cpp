@@ -81,7 +81,7 @@ TEST_CASE("iokit_hid_usage") {
 }
 
 TEST_CASE("iokit_hid_vendor_id") {
-  using t = pqrs::osx::iokit_hid_vendor_id;
+  using t = pqrs::osx::iokit_hid_vendor_id::value_t;
 
   t value1(1);
   t value2(2);
@@ -143,21 +143,21 @@ TEST_CASE("pair<iokit_hid_usage_page, iokit_hid_usage>") {
 }
 
 TEST_CASE("pair<iokit_hid_vendor_id, iokit_hid_product_id>") {
-  pqrs::osx::iokit_hid_vendor_id vendor_id(1);
+  pqrs::osx::iokit_hid_vendor_id::value_t vendor_id(1);
   pqrs::osx::iokit_hid_product_id::value_t product_id(2);
 
-  using pair_t = std::pair<pqrs::osx::iokit_hid_vendor_id,
+  using pair_t = std::pair<pqrs::osx::iokit_hid_vendor_id::value_t,
                            pqrs::osx::iokit_hid_product_id::value_t>;
   std::unordered_set<pair_t> set;
   set.insert(std::make_pair(vendor_id, product_id));
 }
 
 TEST_CASE("tuple<iokit_hid_vendor_id, iokit_hid_product_id, iokit_hid_location_id>") {
-  pqrs::osx::iokit_hid_vendor_id vendor_id(1);
+  pqrs::osx::iokit_hid_vendor_id::value_t vendor_id(1);
   pqrs::osx::iokit_hid_product_id::value_t product_id(2);
   pqrs::osx::iokit_hid_location_id::value_t location_id(2);
 
-  using tuple_t = std::tuple<pqrs::osx::iokit_hid_vendor_id,
+  using tuple_t = std::tuple<pqrs::osx::iokit_hid_vendor_id::value_t,
                              pqrs::osx::iokit_hid_product_id::value_t,
                              pqrs::osx::iokit_hid_location_id::value_t>;
   std::unordered_set<tuple_t> set;
