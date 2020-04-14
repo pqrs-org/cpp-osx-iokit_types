@@ -40,8 +40,8 @@ TEST_CASE("boost") {
   }
 
   {
-    pqrs::osx::iokit_keyboard_type v(100);
-    REQUIRE(std::hash<pqrs::osx::iokit_keyboard_type>{}(v) ==
+    pqrs::osx::iokit_keyboard_type::value_t v(100);
+    REQUIRE(std::hash<pqrs::osx::iokit_keyboard_type::value_t>{}(v) ==
             pqrs::osx::hash_value(v));
   }
 

@@ -96,7 +96,7 @@ TEST_CASE("iokit_hid_vendor_id") {
 }
 
 TEST_CASE("iokit_keyboard_type") {
-  using t = pqrs::osx::iokit_keyboard_type;
+  using t = pqrs::osx::iokit_keyboard_type::value_t;
 
   t value1(1);
   t value2(2);
@@ -111,10 +111,10 @@ TEST_CASE("iokit_keyboard_type") {
 }
 
 TEST_CASE("make_iokit_keyboard_type_string") {
-  REQUIRE(pqrs::osx::make_iokit_keyboard_type_string(pqrs::osx::iokit_keyboard_type(40)) == "ansi");
-  REQUIRE(pqrs::osx::make_iokit_keyboard_type_string(pqrs::osx::iokit_keyboard_type(41)) == "iso");
-  REQUIRE(pqrs::osx::make_iokit_keyboard_type_string(pqrs::osx::iokit_keyboard_type(42)) == "jis");
-  REQUIRE(pqrs::osx::make_iokit_keyboard_type_string(pqrs::osx::iokit_keyboard_type(0)) == "ansi");
+  REQUIRE(pqrs::osx::iokit_keyboard_type::make_string(pqrs::osx::iokit_keyboard_type::ansi) == "ansi");
+  REQUIRE(pqrs::osx::iokit_keyboard_type::make_string(pqrs::osx::iokit_keyboard_type::iso) == "iso");
+  REQUIRE(pqrs::osx::iokit_keyboard_type::make_string(pqrs::osx::iokit_keyboard_type::jis) == "jis");
+  REQUIRE(pqrs::osx::iokit_keyboard_type::make_string(pqrs::osx::iokit_keyboard_type::value_t(0)) == "ansi");
 }
 
 TEST_CASE("iokit_registry_entry_id") {

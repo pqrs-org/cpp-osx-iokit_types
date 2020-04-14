@@ -213,7 +213,7 @@ TEST_CASE("nlohmann_json") {
   // iokit_keyboard_type
 
   {
-    using t = pqrs::osx::iokit_keyboard_type;
+    using t = pqrs::osx::iokit_keyboard_type::value_t;
 
     {
       t value1(u64);
