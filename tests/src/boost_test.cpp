@@ -28,8 +28,8 @@ TEST_CASE("boost") {
   }
 
   {
-    pqrs::osx::iokit_hid_usage_page v(100);
-    REQUIRE(std::hash<pqrs::osx::iokit_hid_usage_page>{}(v) ==
+    pqrs::osx::iokit_hid_usage_page::value_t v(100);
+    REQUIRE(std::hash<pqrs::osx::iokit_hid_usage_page::value_t>{}(v) ==
             pqrs::osx::hash_value(v));
   }
 

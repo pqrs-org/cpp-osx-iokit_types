@@ -76,20 +76,20 @@ inline void from_json(const nlohmann::json& j, iokit_hid_usage& value) {
   value = iokit_hid_usage(j.get<int32_t>());
 }
 
-// iokit_hid_usage_page
-
-inline void to_json(nlohmann::json& j, const iokit_hid_usage_page& value) {
+namespace iokit_hid_usage_page {
+inline void to_json(nlohmann::json& j, const value_t& value) {
   j = type_safe::get(value);
 }
 
-inline void from_json(const nlohmann::json& j, iokit_hid_usage_page& value) {
+inline void from_json(const nlohmann::json& j, value_t& value) {
   if (!j.is_number()) {
     using namespace std::string_literals;
     throw json::unmarshal_error("json must be number, but is `"s + j.dump() + "`"s);
   }
 
-  value = iokit_hid_usage_page(j.get<int32_t>());
+  value = value_t(j.get<int32_t>());
 }
+} // namespace iokit_hid_usage_page
 
 // iokit_hid_vendor_id
 

@@ -145,7 +145,7 @@ TEST_CASE("nlohmann_json") {
   // iokit_hid_usage_page
 
   {
-    using t = pqrs::osx::iokit_hid_usage_page;
+    using t = pqrs::osx::iokit_hid_usage_page::value_t;
 
     {
       t value1(i32);

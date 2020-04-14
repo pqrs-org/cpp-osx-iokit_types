@@ -51,7 +51,7 @@ TEST_CASE("iokit_hid_product_id") {
 }
 
 TEST_CASE("iokit_hid_usage_page") {
-  using t = pqrs::osx::iokit_hid_usage_page;
+  using t = pqrs::osx::iokit_hid_usage_page::value_t;
 
   t value1(1);
   t value2(2);
@@ -133,10 +133,12 @@ TEST_CASE("iokit_registry_entry_id") {
 }
 
 TEST_CASE("pair<iokit_hid_usage_page, iokit_hid_usage>") {
-  pqrs::osx::iokit_hid_usage_page usage_page(1);
+  pqrs::osx::iokit_hid_usage_page::value_t usage_page(1);
   pqrs::osx::iokit_hid_usage usage(2);
 
-  std::unordered_set<std::pair<pqrs::osx::iokit_hid_usage_page, pqrs::osx::iokit_hid_usage>> set;
+  using pair_t = std::pair<pqrs::osx::iokit_hid_usage_page::value_t,
+                           pqrs::osx::iokit_hid_usage>;
+  std::unordered_set<pair_t> set;
   set.insert(std::make_pair(usage_page, usage));
 }
 
