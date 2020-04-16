@@ -1,1 +1,2 @@
 foonathan/type_safe
+pqrs-org/cpp-hid

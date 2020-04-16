@@ -9,6 +9,7 @@ IOKit type definitions.
 
 cpp-osx-iokit_types depends the following classes.
 
+- [pqrs::hid](https://github.com/pqrs-org/cpp-hid)
 - [type_safe](https://github.com/foonathan/type_safe)
 
 ## Install
