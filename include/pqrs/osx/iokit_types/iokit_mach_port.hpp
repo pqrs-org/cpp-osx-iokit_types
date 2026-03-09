@@ -7,6 +7,7 @@
 #include <compare>
 #include <functional>
 #include <iostream>
+#include <mach/mach.h>
 #include <type_safe/strong_typedef.hpp>
 
 namespace pqrs {
