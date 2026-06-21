@@ -1,7 +1,7 @@
 #include <pqrs/osx/iokit_types.hpp>
 #include <unordered_map>
 
-int main(void) {
+int main() {
   pqrs::osx::iokit_registry_entry_id::value_t registry_entry_id(12345);
   std::cout << "registry_entry_id:" << registry_entry_id << std::endl;
 

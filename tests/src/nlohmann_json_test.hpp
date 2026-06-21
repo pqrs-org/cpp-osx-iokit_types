@@ -5,7 +5,7 @@ namespace {
 using namespace boost::ut;
 
 template <typename t>
-void exception_test(void) {
+void exception_test() {
   try {
     nlohmann::json().get<t>();
     expect(false);
@@ -53,7 +53,7 @@ void exception_test(void) {
 }
 } // namespace
 
-void run_nlohmann_json_test(void) {
+void run_nlohmann_json_test() {
   using namespace boost::ut;
   using namespace boost::ut::literals;
 

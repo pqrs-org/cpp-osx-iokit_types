@@ -1,7 +1,7 @@
 #include <boost/ut.hpp>
 #include <pqrs/osx/iokit_types/extra/boost.hpp>
 
-void run_boost_test(void) {
+void run_boost_test() {
   using namespace boost::ut;
   using namespace boost::ut::literals;
 

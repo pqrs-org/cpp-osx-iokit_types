@@ -5,7 +5,7 @@
 #include <unordered_map>
 #include <unordered_set>
 
-int main(void) {
+int main() {
   using namespace boost::ut;
   using namespace boost::ut::literals;
 
@@ -46,6 +46,22 @@ int main(void) {
     expect(pqrs::osx::iokit_keyboard_type::make_string(pqrs::osx::iokit_keyboard_type::value_t(0)) == "ansi");
   };
 
+  "iokit_mach_port"_test = [] {
+    using t = pqrs::osx::iokit_mach_port::value_t;
+
+    t value1(1);
+    t value2(2);
+
+    expect(value1 != value2);
+    expect(value1 < value2);
+    expect(pqrs::osx::iokit_mach_port::null == t(0));
+
+    std::unordered_map<t, bool> map;
+    map[value1] = true;
+
+    expect(std::hash<t>{}(t(100)) != std::hash<t>{}(t(0)));
+  };
+
   "iokit_registry_entry_id"_test = [] {
     using t = pqrs::osx::iokit_registry_entry_id::value_t;
 
@@ -71,6 +87,8 @@ int main(void) {
                                pqrs::osx::iokit_hid_location_id::value_t>;
     std::unordered_set<tuple_t> set;
     set.insert(std::make_tuple(vendor_id, product_id, location_id));
+
+    expect(set.contains(std::make_tuple(vendor_id, product_id, location_id)));
   };
 
   run_boost_test();
